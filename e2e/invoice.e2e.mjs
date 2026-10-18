@@ -19,6 +19,7 @@ function assert(cond, msg) {
   console.log(`\n🧪 Running Playwright E2E on ${BASE} ...\n`);
   const browser = await chromium.launch({ channel: "chrome", headless: true });
   const context = await browser.newContext({ acceptDownloads: true });
+  await context.route(/googletagmanager|google-analytics|clarity\.ms|_vercel\/insights/i, (route) => route.abort());
   const page = await context.newPage();
 
   const consoleErrors = [];
