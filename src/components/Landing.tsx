@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import InvoiceGenerator, { DepositMode } from "./InvoiceGenerator";
+import FeedbackBar from "./FeedbackBar";
 
 export interface FAQItem {
   q: string;
@@ -104,6 +105,10 @@ export default function Landing({
           defaultDepositPercent={defaultDepositPercent}
           defaultWholesaleMode={defaultWholesaleMode}
         />
+
+        <div className="mt-6">
+          <FeedbackBar toolName="Deposit Invoice Generator" theme="dark" />
+        </div>
 
         {/* 三步使用指南 */}
         <section className="mt-16 border-t border-slate-900 pt-12">
