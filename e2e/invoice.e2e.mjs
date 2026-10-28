@@ -94,11 +94,16 @@ function assert(cond, msg) {
     "/wholesale-invoice-template",
     "/sitemap.xml",
     "/robots.txt",
+    "/llms.txt",
   ];
   for (const r of routes) {
     const res = await page.goto(`${BASE}${r}`, { waitUntil: "load", timeout: 30000 });
     assert(res && res.status() === 200, `Route ${r} returns HTTP 200`);
   }
+
+  await page.goto(`${BASE}/?utm_source=chatgpt.com`, { waitUntil: "networkidle", timeout: 30000 });
+  const aiAttr = await page.locator("html").getAttribute("data-ai-referral");
+  assert(aiAttr === "openai:chatgpt", `GEOInflow AI referral attribution tagged html[data-ai-referral="${aiAttr}"]`);
 
   // 8. 验证 /wholesale-invoice-template 默认开启批发折扣计算
   await page.goto(`${BASE}/wholesale-invoice-template`, { waitUntil: "load", timeout: 30000 });

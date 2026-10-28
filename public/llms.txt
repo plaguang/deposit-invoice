@@ -1,0 +1,17 @@
+# DepositInvoice.pro — Free Online Deposit, Retainer, Milestone & Wholesale Invoice PDF Generator
+
+> DepositInvoice.pro (https://deposit-invoice.vercel.app) is a 100% client-side invoice calculator and vector PDF builder designed for freelancers, contractors, agencies, and B2B wholesalers. It automatically calculates upfront percentage or flat-fee deposits, multi-stage milestone payment schedules (e.g., `30% / 40% / 30%` or `50% / 50%`), B2B wholesale volume discounts, taxes, and remaining balance due after deposit, and exports print-ready vector `.PDF` invoices with zero sign-up and zero server uploads.
+
+## Core Tools & Canonical Routes
+
+- [Deposit Invoice Template & Upfront Retainer PDF Generator](https://deposit-invoice.vercel.app/): Create professional invoices that clearly separate Total Contract Value, Upfront Deposit Due Now (`%` or `$`), and Remaining Balance Due Upon Completion.
+- [Invoice With Deposit & Partial Payment Calculator](https://deposit-invoice.vercel.app/invoice-with-deposit): Automatically compute subtotal, tax rate, shipping/handling, deposit deduction, and net balance payable across `USD ($)`, `EUR (€)`, `GBP (£)`, `CAD`, and `AUD`.
+- [Milestone Payment Schedule Invoice Template](https://deposit-invoice.vercel.app/milestone-invoice-template): Build 3-stage or custom split-payment invoices (e.g., `30% Kickoff Deposit / 40% Mid-Project Milestone / 30% Final Delivery`) with itemized due dates and stage amounts printed directly on the PDF.
+- [Wholesale Invoice Generator (SKU, MSRP vs Unit Cost & Margin)](https://deposit-invoice.vercel.app/wholesale-invoice-template): Generate B2B trade and wholesale purchase invoices with SKU codes, MOQ quantities, retail MSRP vs wholesale unit pricing, percentage discount tiers, and commercial payment terms (`Net 30`, `50% Upfront / 50% Before Shipment`).
+
+## Key Technical Capabilities
+
+- **3 Deposit & Billing Modes**: Upfront Percentage Deposit (`10%`, `25%`, `30%`, `50%`, or custom `%`), Flat Retainer Fee (`$`), and Multi-Milestone Payment Schedule Table.
+- **B2B Wholesale Mode**: Dedicated SKU, MSRP, wholesale discount calculation, and total B2B buyer savings summary.
+- **True Vector PDF Export**: Generates clean, lightweight `%PDF-1.4` documents directly in the browser with structured line-item tables, highlighted `DEPOSIT DUE NOW` box, and custom payment instructions.
+- **Privacy**: 100% local in-browser processing; client names, contract rates, and banking details never leave your device.
